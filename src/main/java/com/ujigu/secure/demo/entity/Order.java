@@ -1,63 +1,72 @@
-/*
- * Copyright 1999-2015 dangdang.com.
- * <p>
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * </p>
- */
-
 package com.ujigu.secure.demo.entity;
 
 import com.ujigu.secure.common.bean.BaseEntity;
+import com.ujigu.secure.common.bean.CommonStatus;
+import java.util.Date;
 
-public final class Order  extends BaseEntity<Long>{
-    
-    private long orderId;
-    
-    private int userId;
-    
-    private String status;
-    
-    public long getOrderId() {
+public class Order extends BaseEntity<Integer> {
+    private Integer orderId;
+
+    private Integer userId;
+
+    private Integer price;
+
+    private CommonStatus status;
+
+    private Date createTime;
+
+    private Date lastUptime;
+
+    public Integer getOrderId() {
         return orderId;
     }
-    
-    public void setOrderId(final long orderId) {
+
+    public void setOrderId(Integer orderId) {
         this.orderId = orderId;
     }
-    
-    public int getUserId() {
+
+    public Integer getUserId() {
         return userId;
     }
-    
-    public void setUserId(final int userId) {
+
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
-    
-    public String getStatus() {
-        return status;
-    }
-    
-    public void setStatus(final String status) {
-        this.status = status;
-    }
-    
-    @Override
-    public String toString() {
-        return String.format("order_id: %s, user_id: %s, status: %s", orderId, userId, status);
+
+    public Integer getPrice() {
+        return price;
     }
 
-	@Override
-	public Long getPK() {
-		return orderId;
-	}
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
+
+    public CommonStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(CommonStatus status) {
+        this.status = status;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getLastUptime() {
+        return lastUptime;
+    }
+
+    public void setLastUptime(Date lastUptime) {
+        this.lastUptime = lastUptime;
+    }
+
+    @Override
+    public Integer getPK() {
+        return orderId;
+    }
 }
