@@ -11,7 +11,7 @@ public class OrderIdGenerator implements KeyGenerator{
 
 	@Override
 	public Number generateKey() {
-		return Long.valueOf(RandomUtil.rand(10000));
+		return RandomUtil.rand(10000);
 	}
 	
 }

@@ -7,8 +7,9 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-            classpath:/context/spring-dataSource.xml
-            classpath:/context/spring-persist.xml 
+            classpath:/context/spring-shard-dataSource.xml
+            classpath:/context/spring-persist.xml
+            classpath:/context/spring-dubbo-service.xml
         </param-value>
 	</context-param>
 	

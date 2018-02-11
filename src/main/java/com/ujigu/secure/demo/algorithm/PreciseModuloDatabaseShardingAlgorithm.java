@@ -17,10 +17,10 @@
 
 package com.ujigu.secure.demo.algorithm;
 
+import java.util.Collection;
+
 import io.shardingjdbc.core.api.algorithm.sharding.PreciseShardingValue;
 import io.shardingjdbc.core.api.algorithm.sharding.standard.PreciseShardingAlgorithm;
-
-import java.util.Collection;
 
 public final class PreciseModuloDatabaseShardingAlgorithm implements PreciseShardingAlgorithm<Integer> {
     
